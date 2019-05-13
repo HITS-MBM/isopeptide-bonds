@@ -1,0 +1,83 @@
+[ LYI ]
+ [ atoms ]
+     N    opls_238   -0.500     1
+     H    opls_241    0.300     1
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_136   -0.120     2
+   HB1    opls_140    0.060     2
+   HB2    opls_140    0.060     2
+    CG    opls_136   -0.120     3
+   HG1    opls_140    0.060     3
+   HG2    opls_140    0.060     3
+    CD    opls_136   -0.120     4
+   HD1    opls_140    0.060     4
+   HD2    opls_140    0.060     4
+    CE    opls_223B   0.080     5
+   HE1    opls_140    0.060     5
+   HE2    opls_140    0.060     5
+    NZ    opls_238   -0.500     5 
+   HZ1    opls_241    0.300     5 
+     C    opls_235    0.500     6
+     O    opls_236   -0.500     6
+ [ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    CG
+    CG   HG1
+    CG   HG2
+    CG    CD
+    CD   HD1
+    CD   HD2
+    CD    CE
+    CE   HE1
+    CE   HE2
+    CE    NZ
+    NZ   HZ1
+     C     O
+    -C     N
+ [ dihedrals ] ; override some with residue-specific ones
+     N    CA    CB    CG    dih_LYS_chi1_N_C_C_C
+    CG    CB    CA     C    dih_LYS_chi1_C_C_C_CO
+    CD    CE    NZ   HZ1    dih_LYS_chi5_C_C_N_H
+ [ impropers ]
+    -C    CA     N     H    improper_Z_N_X_Y 
+    CA    +N     C     O    improper_O_C_X_Y 
+
+
+[ ASI ]
+ [ atoms ]
+     N    opls_238   -0.500     0
+     H    opls_241    0.300     0
+    CA    opls_224B   0.140     1
+    HA    opls_140    0.060     1
+    CB    opls_136   -0.120     2
+   HB1    opls_140    0.060     2
+   HB2    opls_140    0.060     2
+    CG    opls_235    0.500     3
+   OD1    opls_236   -0.500     3
+     C    opls_235    0.500     4
+     O    opls_236   -0.500     4
+ [ bonds ]
+     N     H
+     N    CA
+    CA    HA
+    CA    CB
+    CA     C
+    CB   HB1
+    CB   HB2
+    CB    CG
+    CG   OD1
+     C     O
+    -C     N
+ [ dihedrals ] ; override some with residue-specific ones
+     N    CA    CB    CG     dih_ASN_chi1_N_C_C_C
+    CG    CB    CA     C     dih_ASN_chi1_C_C_C_CO
+ [ impropers ]
+    -C    CA     N     H     improper_Z_N_X_Y 
+    CA    +N     C     O     improper_O_C_X_Y 
